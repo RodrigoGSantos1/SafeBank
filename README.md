@@ -33,28 +33,45 @@ SafeBank is a comprehensive banking application that demonstrates modern mobile 
 
 <div align="center">
 
-### 🔐 Authentication Flow
-![Login Screen](https://i.imgur.com/VNYfuKs.png)
-*Secure login with email/password and biometric options*
+### 🔐 **Authentication & Security**
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+  <div style="text-align: center;">
+    <img src="https://i.imgur.com/VNYfuKs.png" alt="Login Screen" width="280" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+    <p style="margin-top: 8px; font-size: 14px; color: #666;">📱 <strong>Login Screen</strong><br/>Secure email/password authentication</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="https://i.imgur.com/itOlks6.png" alt="Biometric Authentication" width="280" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+    <p style="margin-top: 8px; font-size: 14px; color: #666;">🔐 <strong>Biometric Auth</strong><br/>Face ID / Touch ID support</p>
+  </div>
+</div>
 
-![Biometric Authentication](https://i.imgur.com/itOlks6.png)
-*Face ID/Touch ID authentication for quick access*
+### 🏠 **Dashboard & Navigation**
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+  <div style="text-align: center;">
+    <img src="https://i.imgur.com/eTlwqLj.png" alt="Home Dashboard" width="280" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+    <p style="margin-top: 8px; font-size: 14px; color: #666;">🏦 <strong>Home Dashboard</strong><br/>Balance, quick actions & transactions</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="https://i.imgur.com/bNPty7G.png" alt="Money Transfer" width="280" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+    <p style="margin-top: 8px; font-size: 14px; color: #666;">💸 <strong>Money Transfer</strong><br/>Intuitive transfer interface</p>
+  </div>
+</div>
 
-### 🏠 Home Dashboard
-![Home Screen](https://i.imgur.com/eTlwqLj.png)
-*Modern dashboard with balance, quick actions, and recent transactions*
+### ⚙️ **Settings & Management**
+<div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0;">
+  <div style="text-align: center;">
+    <img src="https://i.imgur.com/OHixTiC.png" alt="Notifications Center" width="280" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+    <p style="margin-top: 8px; font-size: 14px; color: #666;">🔔 <strong>Notifications</strong><br/>Customizable notification settings</p>
+  </div>
+  <div style="text-align: center;">
+    <img src="https://i.imgur.com/cVaEkN7.png" alt="User Profile" width="280" style="border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);" />
+    <p style="margin-top: 8px; font-size: 14px; color: #666;">👤 <strong>User Profile</strong><br/>Complete user management</p>
+  </div>
+</div>
 
-### 💸 Money Transfer
-![Transfer Screen](https://i.imgur.com/bNPty7G.png)
-*Intuitive money transfer interface with recipient selection*
+---
 
-### 🔔 Notifications Center
-![Notifications Screen](https://i.imgur.com/OHixTiC.png)
-*Comprehensive notification management with customizable settings*
-
-### 👤 User Profile
-![Profile Screen](https://i.imgur.com/cVaEkN7.png)
-*Complete user profile with personal information and preferences*
+**🎨 Modern Dark Theme • 📱 Responsive Design • 🔒 Secure Authentication**
 
 </div>
 
