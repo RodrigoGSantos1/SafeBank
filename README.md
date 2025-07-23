@@ -34,26 +34,26 @@ SafeBank is a comprehensive banking application that demonstrates modern mobile 
 <div align="center">
 
 ### 🔐 Authentication Flow
-![Login Screen](https://i.imgur.com/example1.png)
+![Login Screen](https://imgur.com/gallery/safebank-ICd3my0#VNYfuKs)
 *Secure login with email/password and biometric options*
 
-![Biometric Authentication](https://i.imgur.com/example2.png)
+![Biometric Authentication](https://imgur.com/gallery/safebank-ICd3my0#itOlks6)
 *Face ID/Touch ID authentication for quick access*
 
 ### 🏠 Home Dashboard
-![Home Screen](https://i.imgur.com/example3.png)
+![Home Screen](https://imgur.com/gallery/safebank-ICd3my0#eTlwqLj)
 *Modern dashboard with balance, quick actions, and recent transactions*
 
 ### 💸 Money Transfer
-![Transfer Screen](https://i.imgur.com/example4.png)
+![Transfer Screen](https://imgur.com/gallery/safebank-ICd3my0#bNPty7G)
 *Intuitive money transfer interface with recipient selection*
 
 ### 🔔 Notifications Center
-![Notifications Screen](https://i.imgur.com/example5.png)
+![Notifications Screen](https://imgur.com/gallery/safebank-ICd3my0#OHixTiC)
 *Comprehensive notification management with customizable settings*
 
 ### 👤 User Profile
-![Profile Screen](https://i.imgur.com/example6.png)
+![Profile Screen](https://imgur.com/gallery/safebank-ICd3my0#cVaEkN7)
 *Complete user profile with personal information and preferences*
 
 </div>
@@ -113,7 +113,7 @@ SafeBank is a comprehensive banking application that demonstrates modern mobile 
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/your-username/safebank.git
+git clone https://github.com/RodrigoGSantos1/safebank.git
 cd safebank
 npm install
 ```
@@ -372,9 +372,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [Your Profile](https://linkedin.com/in/your-profile)
-- Portfolio: [your-website.com](https://your-website.com)
+- GitHub: [@your-username](https://github.com/RodrigoGSantos1)
+- LinkedIn: [Your Profile](https://www.linkedin.com/in/dev-rodrigo-guedes-dos-santos/)
+<!-- - Portfolio: [your-website.com](https://your-website.com)https://www.linkedin.com/in/dev-rodrigo-guedes-dos-santos/ -->
 
 ---
 
@@ -391,7 +391,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ⭐ **Star this repository if it helped you!**
 
-[![GitHub stars](https://img.shields.io/github/stars/your-username/safebank?style=social)](https://github.com/your-username/safebank)
-[![GitHub forks](https://img.shields.io/github/forks/your-username/safebank?style=social)](https://github.com/your-username/safebank)
+[![GitHub stars](https://img.shields.io/github/stars/RodrigoGSantos1/safebank?style=social)](https://github.com/RodrigoGSantos1/safebank)
+[![GitHub forks](https://img.shields.io/github/forks/RodrigoGSantos1/safebank?style=social)](https://github.com/RodrigoGSantos1/safebank)
 
 </div> 
