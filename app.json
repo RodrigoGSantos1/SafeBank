@@ -13,17 +13,71 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.safebank.app",
+      "entitlements": {
+        "keychain-access-groups": [
+          "$(AppIdentifierPrefix)com.safebank.app.shared"
+        ]
+      },
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "SafeBank uses Face ID for secure and convenient authentication to access your banking account.",
+        "NSBiometricUsageDescription": "SafeBank uses biometric authentication (Face ID or Touch ID) to provide secure access to your account.",
+        "LSApplicationQueriesSchemes": [
+          "faceid"
+        ],
+        "NSLocationWhenInUseUsageDescription": "This app does not use location services.",
+        "NSCameraUsageDescription": "This app does not use the camera.",
+        "NSMicrophoneUsageDescription": "This app does not use the microphone."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "edgeToEdgeEnabled": true
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "USE_FINGERPRINT",
+        "USE_BIOMETRIC",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT",
+        "USE_FINGERPRINT",
+        "USE_BIOMETRIC",
+        "android.permission.USE_BIOMETRIC",
+        "android.permission.USE_FINGERPRINT"
+      ],
+      "package": "com.safebank.app"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "SafeBank uses Face ID for secure authentication to access your banking account.",
+          "touchIDPermission": "SafeBank uses Touch ID for secure authentication to access your banking account."
+        }
+      ],
+      [
+        "expo-secure-store",
+        {
+          "faceIDPermission": "SafeBank uses Face ID to securely access your stored authentication data."
+        }
+      ]
+    ],
+    "notification": {
+      "icon": "./assets/notification-icon.png",
+      "color": "#FE7359",
+      "iosDisplayInForeground": true,
+      "androidMode": "default",
+      "androidCollapsedTitle": "SafeBank"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "your-project-id"
+      }
     }
   }
 }
