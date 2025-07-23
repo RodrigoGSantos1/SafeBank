@@ -29,6 +29,37 @@ SafeBank is a comprehensive banking application that demonstrates modern mobile 
 
 ---
 
+## 📸 Screenshots
+
+<div align="center">
+
+### 🔐 Authentication Flow
+![Login Screen](https://i.imgur.com/example1.png)
+*Secure login with email/password and biometric options*
+
+![Biometric Authentication](https://i.imgur.com/example2.png)
+*Face ID/Touch ID authentication for quick access*
+
+### 🏠 Home Dashboard
+![Home Screen](https://i.imgur.com/example3.png)
+*Modern dashboard with balance, quick actions, and recent transactions*
+
+### 💸 Money Transfer
+![Transfer Screen](https://i.imgur.com/example4.png)
+*Intuitive money transfer interface with recipient selection*
+
+### 🔔 Notifications Center
+![Notifications Screen](https://i.imgur.com/example5.png)
+*Comprehensive notification management with customizable settings*
+
+### 👤 User Profile
+![Profile Screen](https://i.imgur.com/example6.png)
+*Complete user profile with personal information and preferences*
+
+</div>
+
+---
+
 ## 🛠️ Tech Stack
 
 | Category | Technology | Purpose |
@@ -69,12 +100,6 @@ SafeBank is a comprehensive banking application that demonstrates modern mobile 
 - **Dark/Light Theme** - Automatic theme switching
 - **Smooth Animations** - React Native Reanimated
 - **Accessibility** - Screen reader support
-
----
-
-## 📸 Screenshots
-
-*Screenshots will be added here showing the app interface*
 
 ---
 

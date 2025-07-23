@@ -32,15 +32,19 @@ const TransactionsTable = forwardRef<TransactionsTableRef, TransactionsTableProp
 
   const fetchTransactions = useCallback(async () => {
     if (!userProfile?.id) {
+      setTransactions([]);
+      setFilteredTransactions([]);
       return;
     }
     
     try {
       const userTransactions = await getUserTransactions(userProfile.id);
-      setTransactions(userTransactions);
-      setFilteredTransactions(userTransactions);
+      setTransactions(userTransactions || []);
+      setFilteredTransactions(userTransactions || []);
       lastUpdateRef.current = Date.now();
     } catch (error) {
+      setTransactions([]);
+      setFilteredTransactions([]);
       throw error;
     }
   }, [userProfile?.id]);

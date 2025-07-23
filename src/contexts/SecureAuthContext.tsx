@@ -217,7 +217,7 @@ export const SecureAuthProvider: React.FC<AuthProviderProps> = ({
       }
     } catch (error) {
       console.error("❌ Secure sign in error:", error);
-      return { success: false, message: "Erro inesperado durante o login" };
+      return { success: false, message: "Unexpected error during login" };
     } finally {
       setLoading(false);
     }
@@ -239,7 +239,7 @@ export const SecureAuthProvider: React.FC<AuthProviderProps> = ({
       }
     } catch (error) {
       console.error("❌ Secure sign up error:", error);
-      return { success: false, message: "Erro inesperado durante o cadastro" };
+      return { success: false, message: "Unexpected error during registration" };
     } finally {
       setLoading(false);
     }
@@ -348,7 +348,7 @@ export const SecureAuthProvider: React.FC<AuthProviderProps> = ({
       }
     } catch (error) {
       console.error("❌ Secure sign out error:", error);
-      return { success: false, message: "Erro durante logout" };
+      return { success: false, message: "Error during logout" };
     } finally {
       setLoading(false);
     }

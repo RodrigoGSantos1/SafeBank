@@ -28,7 +28,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
     try {
       await new Promise(resolve => setTimeout(resolve, 1000));
     } catch (error) {
-      console.error('❌ Erro ao atualizar perfil:', error);
+      console.error('❌ Error updating profile:', error);
     } finally {
       setRefreshing(false);
     }
@@ -132,10 +132,10 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         <View className="flex-row space-x-4">
           <View className="flex-1 items-center p-3 rounded-xl" style={{ backgroundColor: `${colors.success}10` }}>
             <Text style={{ color: colors.success }} className="text-lg font-bold">
-              R$ 0,00
+              $ 0.00
             </Text>
             <Text style={{ color: colors.textSecondary }} className="text-xs">
-              Saldo
+              Balance
             </Text>
           </View>
           <View className="flex-1 items-center p-3 rounded-xl" style={{ backgroundColor: `${colors.primary}10` }}>
@@ -143,7 +143,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
               0
             </Text>
             <Text style={{ color: colors.textSecondary }} className="text-xs">
-              Transações
+              Transactions
             </Text>
           </View>
         </View>
@@ -157,7 +157,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         style={{ color: colors.textPrimary }}
         className="text-lg font-bold mb-4"
       >
-        Informações Pessoais
+        Personal Information
       </Text>
       
       <View 
@@ -172,12 +172,12 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="person" size={20} color={colors.textSecondary} />
               <Text style={{ color: colors.textPrimary }} className="ml-3 font-medium">
-                Nome completo
+                Full name
               </Text>
             </View>
             <View className="flex-row items-center">
               <Text style={{ color: colors.textSecondary }} className="text-sm mr-2">
-                {user?.name || 'Não definido'}
+                {user?.name || 'Not defined'}
               </Text>
               <MaterialIcons name="chevron-right" size={20} color={colors.textSecondary} />
             </View>
@@ -189,12 +189,12 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="email" size={20} color={colors.textSecondary} />
               <Text style={{ color: colors.textPrimary }} className="ml-3 font-medium">
-                E-mail
+                Email
               </Text>
             </View>
             <View className="flex-row items-center">
               <Text style={{ color: colors.textSecondary }} className="text-sm mr-2">
-                {user?.email || 'Não definido'}
+                {user?.email || 'Not defined'}
               </Text>
               <MaterialIcons name="chevron-right" size={20} color={colors.textSecondary} />
             </View>
@@ -206,12 +206,12 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="phone" size={20} color={colors.textSecondary} />
               <Text style={{ color: colors.textPrimary }} className="ml-3 font-medium">
-                Telefone
+                Phone
               </Text>
             </View>
             <View className="flex-row items-center">
               <Text style={{ color: colors.textSecondary }} className="text-sm mr-2">
-                Não definido
+                Not defined
               </Text>
               <MaterialIcons name="chevron-right" size={20} color={colors.textSecondary} />
             </View>
@@ -223,12 +223,12 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="location-on" size={20} color={colors.textSecondary} />
               <Text style={{ color: colors.textPrimary }} className="ml-3 font-medium">
-                Endereço
+                Address
               </Text>
             </View>
             <View className="flex-row items-center">
               <Text style={{ color: colors.textSecondary }} className="text-sm mr-2">
-                Não definido
+                Not defined
               </Text>
               <MaterialIcons name="chevron-right" size={20} color={colors.textSecondary} />
             </View>
@@ -244,7 +244,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         style={{ color: colors.textPrimary }}
         className="text-lg font-bold mb-4"
       >
-        Preferências
+        Preferences
       </Text>
       
       <View 
@@ -259,12 +259,12 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="palette" size={20} color={colors.textSecondary} />
               <Text style={{ color: colors.textPrimary }} className="ml-3 font-medium">
-                Tema
+                Theme
               </Text>
             </View>
             <View className="flex-row items-center">
               <Text style={{ color: colors.textSecondary }} className="text-sm mr-2">
-                {theme === 'system' ? 'Sistema' : theme === 'dark' ? 'Escuro' : 'Claro'}
+                {theme === 'system' ? 'System' : theme === 'dark' ? 'Dark' : 'Light'}
               </Text>
               <MaterialIcons name="chevron-right" size={20} color={colors.textSecondary} />
             </View>
@@ -276,15 +276,15 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="notifications" size={20} color={colors.textSecondary} />
               <Text style={{ color: colors.textPrimary }} className="ml-3 font-medium">
-                Notificações
+                Notifications
               </Text>
             </View>
             <Switch
-              value={settings.transactions || settings.security || settings.system}
+              value={settings?.transactions || settings?.security || settings?.system || false}
               onValueChange={(value) => {
               }}
               trackColor={{ false: `${colors.border}`, true: colors.primary }}
-              thumbColor={settings.transactions || settings.security || settings.system ? '#ffffff' : '#f3f4f6'}
+              thumbColor={settings?.transactions || settings?.security || settings?.system ? '#ffffff' : '#f3f4f6'}
             />
           </View>
         </View>
@@ -294,7 +294,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="security" size={20} color={colors.textSecondary} />
               <Text style={{ color: colors.textPrimary }} className="ml-3 font-medium">
-                Biometria
+                Biometrics
               </Text>
             </View>
             <Switch
@@ -401,7 +401,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         style={{ color: colors.textPrimary }}
         className="text-lg font-bold mb-4"
       >
-        Ações
+        Actions
       </Text>
       
       <View 
@@ -416,7 +416,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="help" size={20} color={colors.textSecondary} />
               <Text style={{ color: colors.textPrimary }} className="ml-3 font-medium">
-                Ajuda e suporte
+                Help and support
               </Text>
             </View>
             <MaterialIcons name="chevron-right" size={20} color={colors.textSecondary} />
@@ -428,7 +428,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="description" size={20} color={colors.textSecondary} />
               <Text style={{ color: colors.textPrimary }} className="ml-3 font-medium">
-                Termos de uso
+                Terms of use
               </Text>
             </View>
             <MaterialIcons name="chevron-right" size={20} color={colors.textSecondary} />
@@ -440,7 +440,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="privacy-tip" size={20} color={colors.textSecondary} />
               <Text style={{ color: colors.textPrimary }} className="ml-3 font-medium">
-                Política de privacidade
+                Privacy policy
               </Text>
             </View>
             <MaterialIcons name="chevron-right" size={20} color={colors.textSecondary} />
@@ -452,7 +452,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="info" size={20} color={colors.textSecondary} />
               <Text style={{ color: colors.textPrimary }} className="ml-3 font-medium">
-                Sobre o app
+                About the app
               </Text>
             </View>
             <MaterialIcons name="chevron-right" size={20} color={colors.textSecondary} />
@@ -468,7 +468,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="logout" size={20} color={colors.warning} />
               <Text style={{ color: colors.warning }} className="ml-3 font-medium">
-                Sair da conta
+                Sign out
               </Text>
             </View>
             <MaterialIcons name="chevron-right" size={20} color={colors.warning} />
@@ -483,7 +483,7 @@ const ProfileScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
             <View className="flex-row items-center">
               <MaterialIcons name="delete-forever" size={20} color={colors.error} />
               <Text style={{ color: colors.error }} className="ml-3 font-medium">
-                Excluir conta
+                Delete account
               </Text>
             </View>
             <MaterialIcons name="chevron-right" size={20} color={colors.error} />

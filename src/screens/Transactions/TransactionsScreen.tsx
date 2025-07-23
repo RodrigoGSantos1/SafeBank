@@ -105,9 +105,9 @@ const TransactionScreen = ({ navigation, route }: any) => {
             try {
               const syncService = NotificationSyncService.getInstance();
               await syncService.syncNotificationsFromFirestore(selectedUser.id, () => {});
-            } catch (error) {
-              console.error('Erro ao sincronizar notificações do destinatário:', error);
-            }
+                } catch (error) {
+      console.error('Error syncing recipient notifications:', error);
+    }
           }, 1000);
         }
       }

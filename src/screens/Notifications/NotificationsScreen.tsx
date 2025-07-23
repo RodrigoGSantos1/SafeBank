@@ -40,7 +40,7 @@ const NotificationsScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         await syncNotifications();
       }
     } catch (error) {
-      console.error("❌ Erro ao sincronizar notificações:", error);
+      console.error("❌ Error syncing notifications:", error);
     } finally {
       setTimeout(() => setRefreshing(false), 1000);
     }
@@ -180,7 +180,7 @@ const NotificationsScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
         style={{ color: colors.textPrimary }}
         className="text-lg font-bold mb-4"
       >
-        Configurações
+        Settings
       </Text>
 
       <View
@@ -200,19 +200,19 @@ const NotificationsScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
                 style={{ color: colors.textPrimary }}
                 className="font-medium"
               >
-                Transações
+                Transactions
               </Text>
               <Text style={{ color: colors.textSecondary }} className="text-sm">
-                Notificações de pagamentos
+                Payment notifications
               </Text>
             </View>
             <Switch
-              value={settings.transactions}
+              value={settings?.transactions || false}
               onValueChange={(value) =>
                 handleSettingChange("transactions", value)
               }
               trackColor={{ false: `${colors.border}`, true: colors.primary }}
-              thumbColor={settings.transactions ? "#ffffff" : "#f3f4f6"}
+              thumbColor={settings?.transactions ? "#ffffff" : "#f3f4f6"}
             />
           </View>
         </View>
@@ -227,10 +227,10 @@ const NotificationsScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
                 style={{ color: colors.textPrimary }}
                 className="font-medium"
               >
-                Segurança
+                Security
               </Text>
               <Text style={{ color: colors.textSecondary }} className="text-sm">
-                Alertas de segurança
+                Security alerts
               </Text>
             </View>
             <Switch
@@ -252,10 +252,10 @@ const NotificationsScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
                 style={{ color: colors.textPrimary }}
                 className="font-medium"
               >
-                Sistema
+                System
               </Text>
               <Text style={{ color: colors.textSecondary }} className="text-sm">
-                Atualizações do app
+                App updates
               </Text>
             </View>
             <Switch
@@ -274,10 +274,10 @@ const NotificationsScreen: React.FC<{ navigation: any }> = ({ navigation }) => {
                 style={{ color: colors.textPrimary }}
                 className="font-medium"
               >
-                Som
+                Sound
               </Text>
               <Text style={{ color: colors.textSecondary }} className="text-sm">
-                Tocar som nas notificações
+                Play sound for notifications
               </Text>
             </View>
             <Switch

@@ -48,6 +48,19 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
     sound: true,
     vibration: true,
   });
+
+  useEffect(() => {
+    if (!settings) {
+      setSettings({
+        transactions: true,
+        security: true,
+        system: true,
+        promotions: false,
+        sound: true,
+        vibration: true,
+      });
+    }
+  }, [settings]);
   const [notificationService] = useState(() => NotificationService.getInstance());
   const [syncService] = useState(() => NotificationSyncService.getInstance());
 
@@ -139,7 +152,14 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
   const value: NotificationContextType = {
     notifications,
     unreadCount,
-    settings,
+    settings: settings || {
+      transactions: true,
+      security: true,
+      system: true,
+      promotions: false,
+      sound: true,
+      vibration: true,
+    },
     addNotification,
     markAsRead,
     markAllAsRead,
@@ -162,5 +182,17 @@ export const useNotifications = (): NotificationContextType => {
   if (!context) {
     throw new Error('useNotifications must be used within a NotificationProvider');
   }
+
+  if (!context.settings) {
+    context.settings = {
+      transactions: true,
+      security: true,
+      system: true,
+      promotions: false,
+      sound: true,
+      vibration: true,
+    };
+  }
+  
   return context;
 }; 
