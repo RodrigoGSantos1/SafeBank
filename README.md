@@ -34,26 +34,26 @@ SafeBank is a comprehensive banking application that demonstrates modern mobile 
 <div align="center">
 
 ### 🔐 Authentication Flow
-![Login Screen](https://imgur.com/VNYfuKs)
+![Login Screen](https://i.imgur.com/VNYfuKs.png)
 *Secure login with email/password and biometric options*
 
-![Biometric Authentication](https://imgur.com/itOlks6)
+![Biometric Authentication](https://i.imgur.com/itOlks6.png)
 *Face ID/Touch ID authentication for quick access*
 
 ### 🏠 Home Dashboard
-![Home Screen](https://imgur.com/eTlwqLj)
+![Home Screen](https://i.imgur.com/eTlwqLj.png)
 *Modern dashboard with balance, quick actions, and recent transactions*
 
 ### 💸 Money Transfer
-![Transfer Screen](https://imgur.com/bNPty7G)
+![Transfer Screen](https://i.imgur.com/bNPty7G.png)
 *Intuitive money transfer interface with recipient selection*
 
 ### 🔔 Notifications Center
-![Notifications Screen](https://imgur.com/OHixTiC)
+![Notifications Screen](https://i.imgur.com/OHixTiC.png)
 *Comprehensive notification management with customizable settings*
 
 ### 👤 User Profile
-![Profile Screen](https://imgur.com/cVaEkN7)
+![Profile Screen](https://i.imgur.com/cVaEkN7.png)
 *Complete user profile with personal information and preferences*
 
 </div>
